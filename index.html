@@ -920,6 +920,94 @@
             font-size: 14px;
         }
 
+        /* Policy Footer */
+        .policy-footer {
+            background: #0a0a1a;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .policy-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .policy-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: white;
+            text-align: center;
+        }
+
+        .policy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-bottom: 40px;
+        }
+
+        .policy-card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 28px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .policy-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .policy-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(37, 99, 235, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-size: 24px;
+            border: 2px solid rgba(37, 99, 235, 0.2);
+        }
+
+        .policy-card h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: white;
+        }
+
+        .policy-card p {
+            color: #94a3b8;
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .policy-statement {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.875rem;
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .policy-statement strong {
+            color: white;
+            font-weight: 600;
+        }
+
         /* Responsive */
         @media (max-width: 1024px) {
             .pricing-cards {
@@ -946,6 +1034,10 @@
             .demo-content {
                 padding-right: 0;
                 text-align: center;
+            }
+            
+            .policy-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             }
         }
 
@@ -1018,6 +1110,10 @@
             .whatsapp-phone {
                 width: 300px;
                 height: 600px;
+            }
+            
+            .policy-grid {
+                grid-template-columns: 1fr;
             }
         }
         
@@ -1116,11 +1212,11 @@
 
             
             <div class="pricing-cards">
-                <!-- Starter Package -->
+                <!-- Starter Package - UPDATED -->
                 <div class="pricing-card">
                     <div class="package-icon">🏆</div>
                     <h3 class="package-name">Starter</h3>
-                    <p class="package-desc">Perfect for basic automation needs</p>
+                    <p class="package-desc">Perfect for basic QR systems and simple automation</p>
                     
                     <div class="price">
                         <div class="price-amount">KES 7,000</div>
@@ -1130,10 +1226,12 @@
                     <div class="delivery-time">📅 Delivery: 24-48 hours</div>
                     
                     <ul class="features-list">
-                        <li><span class="feature-check">✓</span> QR → WhatsApp Enquiry</li>
+                        <li><span class="feature-check">✓</span> QR Systems & WhatsApp Templates</li>
                         <li><span class="feature-check">✓</span> Branded Web Menu / Service Page</li>
-                        <li><span class="feature-check">✓</span> WhatsApp Auto-Replies</li>
-                        <li><span class="feature-check">✓</span> Google Sheets Lead Log</li>
+                        <li><span class="feature-check">✓</span> Basic Lead Capture Setup</li>
+                        <li><span class="feature-check">✓</span> Google Sheets Contact Log</li>
+                        <li><span class="feature-check">✓</span> Simple Business Hours Replies</li>
+                        <li><span class="feature-check">✓</span> Quick Setup & Training</li>
                     </ul>
                     
                     <a href="#contact" class="btn btn-secondary" style="width: 100%;">Get Starter</a>
@@ -1172,7 +1270,7 @@
                     
                     <div class="price">
                         <div class="price-amount">KES 25,000+</div>
-                        <div class="price-period">+ KES 8k–12k/month</div>
+                        <div class="price-period">+ KES 10k–5k/month</div>
                     </div>
                     
                     <div class="delivery-time">📅 Delivery: 3-5 days</div>
@@ -1445,6 +1543,37 @@
             <p style="margin-top: 40px; font-size: 0.875rem; opacity: 0.9;">
                 📍 London UK • Serving Worldwide • No Long-Term Contracts Required
             </p>
+        </div>
+    </section>
+
+    <!-- Data Security & Integrity Policy Section -->
+    <section class="policy-footer">
+        <div class="policy-content">
+            <h3 class="policy-title">Our Commitment to Data Security & Integrity</h3>
+            
+            <div class="policy-grid">
+                <div class="policy-card">
+                    <div class="policy-icon">🔒</div>
+                    <h4>Confidentiality</h4>
+                    <p>We implement zero-access architecture. Your customer data remains encrypted and accessible only to your authorized staff. We never have access to live customer information once systems are deployed.</p>
+                </div>
+                
+                <div class="policy-card">
+                    <div class="policy-icon">⚖️</div>
+                    <h4>Integrity</h4>
+                    <p>All data processing follows strict validation protocols. We implement checksums, audit trails, and validation rules to ensure data remains accurate, complete, and tamper-proof throughout its lifecycle.</p>
+                </div>
+                
+                <div class="policy-card">
+                    <div class="policy-icon">🛡️</div>
+                    <h4>Availability</h4>
+                    <p>Our systems are built with redundancy and failover mechanisms. We guarantee 99.5% uptime for critical functions, with automated backups and disaster recovery protocols to ensure continuous operation.</p>
+                </div>
+            </div>
+            
+            <div class="policy-statement">
+                <strong>Professional Assurance:</strong> We adhere to the CIA Triad (Confidentiality, Integrity, Availability) as our foundational security framework. All systems are deployed with end-to-end encryption, access controls, and audit logging. We function as system architects—not data custodians. Once deployed, your data remains exclusively under your control, with no backdoors, no unauthorized access, and no data retention on our infrastructure beyond initial setup.
+            </div>
         </div>
     </section>
 
