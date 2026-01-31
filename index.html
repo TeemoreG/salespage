@@ -60,6 +60,10 @@
             padding: 0 24px;
         }
 
+        .text-center {
+            text-align: center;
+        }
+
         /* Typography */
         h1, h2, h3, h4 {
             font-weight: 700;
@@ -236,22 +240,27 @@
 
         .roi-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
             margin-top: 50px;
         }
 
         .roi-card {
             background: var(--light);
-            padding: 40px;
+            padding: 40px 30px;
             border-radius: var(--radius);
             border: 2px solid rgba(37, 99, 235, 0.1);
             text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .roi-card:hover {
+            transform: translateY(-5px);
         }
 
         .roi-icon {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             display: flex;
@@ -259,7 +268,7 @@
             justify-content: center;
             margin: 0 auto 24px;
             color: white;
-            font-size: 32px;
+            font-size: 28px;
         }
 
         .roi-number {
@@ -278,15 +287,15 @@
 
         .pricing-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
             margin-top: 60px;
         }
 
         .pricing-card {
             background: white;
             border-radius: var(--radius-lg);
-            padding: 50px 40px;
+            padding: 40px 30px;
             box-shadow: var(--shadow);
             border: 2px solid var(--gray-light);
             transition: all 0.3s ease;
@@ -300,20 +309,20 @@
         }
 
         .pricing-card.popular {
-            border-color: var(--pro);
-            transform: scale(1.05);
+            border-color: var(--growth);
+            transform: scale(1.02);
             z-index: 2;
         }
 
         .pricing-card.popular:hover {
-            transform: scale(1.05) translateY(-10px);
+            transform: scale(1.02) translateY(-10px);
         }
 
         .package-badge {
             position: absolute;
             top: 0;
             right: 0;
-            background: var(--pro);
+            background: var(--growth);
             color: white;
             padding: 8px 24px;
             border-radius: 0 0 0 20px;
@@ -322,14 +331,14 @@
         }
 
         .package-icon {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
-            margin-bottom: 24px;
+            font-size: 28px;
+            margin-bottom: 20px;
             background: var(--starter);
             color: white;
         }
@@ -355,20 +364,20 @@
         }
 
         .price {
-          margin: 20px 0 25px; 
+            margin: 20px 0 25px;
         }
 
         .price-amount {
-    font-size: 2.25rem; 
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 4px;
-}
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 4px;
+        }
 
         .price-period {
-    color: var(--gray);
-    font-size: 0.9rem; 
-}
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
 
         .features-list {
             list-style: none;
@@ -406,10 +415,210 @@
             margin-top: 20px;
         }
 
+        /* Tier Explanation Section */
+        .tier-explanation {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+
+        .explanation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .explanation-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+            border: 2px solid var(--gray-light);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .explanation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .explanation-card.popular {
+            border-color: var(--growth);
+            transform: scale(1.02);
+        }
+
+        .explanation-card.popular:hover {
+            transform: scale(1.02) translateY(-5px);
+        }
+
+        .explanation-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin: 0 auto 20px;
+            color: white;
+        }
+
+        .explanation-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .explanation-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        .explanation-features {
+            list-style: none;
+            text-align: left;
+            margin: 25px 0;
+            padding: 0;
+        }
+
+        .explanation-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--gray-light);
+            color: var(--gray);
+            font-size: 15px;
+        }
+
+        .explanation-features li:last-child {
+            border-bottom: none;
+        }
+
+        .explanation-features li strong {
+            color: var(--dark);
+        }
+
+        .explanation-note {
+            background: var(--light);
+            padding: 16px;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary);
+            margin-top: 25px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .explanation-note strong {
+            color: var(--primary);
+        }
+
+        /* Workflow Section */
+        .workflow-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .workflow-steps {
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .workflow-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: var(--light);
+            border-radius: var(--radius);
+            border: 2px solid rgba(37, 99, 235, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .workflow-step:hover {
+            transform: translateX(5px);
+            border-color: rgba(37, 99, 235, 0.3);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+
+        .step-content p {
+            margin: 0;
+            color: var(--gray);
+        }
+
+        .workflow-note {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 40px;
+            border-radius: var(--radius);
+            border: 2px solid rgba(37, 99, 235, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .workflow-note h4 {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--dark);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .result-item {
+            background: white;
+            padding: 25px 20px;
+            border-radius: var(--radius);
+            border: 2px solid rgba(37, 99, 235, 0.1);
+        }
+
+        .result-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .result-label {
+            font-size: 14px;
+            color: var(--gray);
+            line-height: 1.4;
+        }
+
         /* Delivery Timeline */
         .delivery-section {
             padding: 100px 0;
-            background: white;
+            background: var(--light);
         }
 
         .timeline {
@@ -465,7 +674,7 @@
             color: var(--gray);
         }
 
-        /* WhatsApp Demo Section - UPDATED */
+        /* WhatsApp Demo Section */
         .demo-section {
             padding: 100px 0;
             background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
@@ -699,10 +908,9 @@
             gap: 16px;
             scrollbar-width: thin;
             scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
-            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            -webkit-overflow-scrolling: touch;
         }
         
-        /* Custom scrollbar - FIXED */
         .whatsapp-chat::-webkit-scrollbar {
             width: 6px;
         }
@@ -733,7 +941,7 @@
             margin: 8px 0;
         }
         
-        /* Messages - FIXED STYLES */
+        /* Messages */
         .demo-message {
             max-width: 80%;
             padding: 12px 16px;
@@ -857,7 +1065,7 @@
         }
 
         /* Contact Info */
-        .contact-info {
+        .contact-info-section {
             display: flex;
             gap: 30px;
             flex-wrap: wrap;
@@ -1008,7 +1216,9 @@
             font-weight: 600;
         }
 
-        /* Responsive */
+        /* ================== RESPONSIVE DESIGN ================== */
+
+        /* Large screens (1024px and below) */
         @media (max-width: 1024px) {
             .pricing-cards {
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1039,8 +1249,13 @@
             .policy-grid {
                 grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             }
+            
+            .explanation-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
         }
 
+        /* Tablets (900px and below) */
         @media (max-width: 900px) {
             .demo-container {
                 grid-template-columns: 1fr;
@@ -1056,8 +1271,18 @@
                 width: 320px;
                 height: 640px;
             }
+            
+            .workflow-step {
+                padding: 20px;
+                gap: 20px;
+            }
+            
+            .results-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
+        /* Mobile (768px and below) */
         @media (max-width: 768px) {
             .mobile-menu-btn {
                 display: block;
@@ -1065,6 +1290,23 @@
             
             .nav-links {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                gap: 20px;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .hero {
+                padding: 140px 0 80px;
             }
             
             .pricing-cards {
@@ -1073,7 +1315,7 @@
             }
             
             .pricing-card {
-                padding: 40px 30px;
+                padding: 35px 25px;
             }
             
             .cta-buttons {
@@ -1086,7 +1328,7 @@
                 justify-content: center;
             }
             
-            .contact-info {
+            .contact-info-section {
                 flex-direction: column;
                 align-items: center;
             }
@@ -1115,9 +1357,53 @@
             .policy-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .explanation-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .explanation-card.popular {
+                transform: none;
+            }
+            
+            .explanation-card.popular:hover {
+                transform: translateY(-5px);
+            }
+            
+            .workflow-step {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .step-number {
+                margin: 0 auto;
+            }
+            
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
         }
-        
+
+        /* Small Mobile (480px and below) */
         @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+            
+            .hero {
+                padding: 120px 0 60px;
+            }
+            
             .whatsapp-phone {
                 width: 280px;
                 height: 560px;
@@ -1126,6 +1412,43 @@
             .phone-notch {
                 width: 160px;
                 height: 28px;
+            }
+            
+            .pricing-card {
+                padding: 30px 20px;
+            }
+            
+            .price-amount {
+                font-size: 2rem;
+            }
+            
+            .workflow-step {
+                padding: 15px;
+            }
+            
+            .workflow-note {
+                padding: 25px 20px;
+            }
+            
+            .cta-section {
+                padding: 80px 0;
+            }
+        }
+
+        /* Extra Small Mobile (360px and below) */
+        @media (max-width: 360px) {
+            .whatsapp-phone {
+                width: 260px;
+                height: 520px;
+            }
+            
+            .container {
+                padding: 0 16px;
+            }
+            
+            .btn {
+                padding: 14px 24px;
+                font-size: 15px;
             }
         }
     </style>
@@ -1139,6 +1462,8 @@
             <nav class="nav-links">
                 <a href="#roi">ROI Results</a>
                 <a href="#packages">Packages</a>
+                <a href="#tiers">Who It's For</a>
+                <a href="#workflow">How It Works</a>
                 <a href="#delivery">Delivery</a>
                 <a href="#demo">See Demo</a>
                 <a href="#contact" class="btn btn-primary">Get Started</a>
@@ -1212,7 +1537,7 @@
 
             
             <div class="pricing-cards">
-                <!-- Starter Package - UPDATED -->
+                <!-- Starter Package -->
                 <div class="pricing-card">
                     <div class="package-icon">🏆</div>
                     <h3 class="package-name">Starter</h3>
@@ -1242,7 +1567,7 @@
                     <div class="package-badge">MOST POPULAR</div>
                     <div class="package-icon">📊</div>
                     <h3 class="package-name">Growth</h3>
-                    <p class="package-desc">Everything in Starter plus revenue growth tools</p>
+                    <p class="package-desc">Everything in Starter plus lead & revenue growth tools</p>
                     
                     <div class="price">
                         <div class="price-amount">KES 15,000</div>
@@ -1257,6 +1582,7 @@
                         <li><span class="feature-check">✓</span> AI WhatsApp Agent</li>
                         <li><span class="feature-check">✓</span> WhatsApp Ordering System</li>
                         <li><span class="feature-check">✓</span> Google Reviews Automation</li>
+                        <li><span class="feature-check">✓</span> <strong>Lead Automation System</strong></li>
                     </ul>
                     
                     <a href="#contact" class="btn btn-primary" style="width: 100%; background: var(--growth);">Get Growth</a>
@@ -1266,11 +1592,11 @@
                 <div class="pricing-card pro">
                     <div class="package-icon">📈</div>
                     <h3 class="package-name">Pro</h3>
-                    <p class="package-desc">Complete business automation system</p>
+                    <p class="package-desc">Complete business automation with advanced lead management</p>
                     
                     <div class="price">
                         <div class="price-amount">KES 40,000+</div>
-                        <div class="price-period">+ KES 10k–5k/month</div>
+                        <div class="price-period">+ KES 10k–15k/month</div>
                     </div>
                     
                     <div class="delivery-time">📅 Delivery: 3-5 days</div>
@@ -1282,9 +1608,151 @@
                         <li><span class="feature-check">✓</span> Simple CRM (Google Sheets)</li>
                         <li><span class="feature-check">✓</span> Staff SMS/Email Alerts</li>
                         <li><span class="feature-check">✓</span> Social Media Content Automation</li>
+                        <li><span class="feature-check">✓</span> <strong>Advanced Lead Automation</strong></li>
                     </ul>
                     
                     <a href="#contact" class="btn btn-primary" style="width: 100%;">Get Pro</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tier Explanation Section -->
+    <section id="tiers" class="tier-explanation">
+        <div class="container">
+            <h2 class="text-center">Which Package is Right for Your Business?</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 60px;">
+                Every business is different. Here's how to choose the right automation package:
+            </p>
+            
+            <div class="explanation-grid">
+                <!-- Starter Tier -->
+                <div class="explanation-card">
+                    <div class="explanation-icon" style="background: var(--starter);">🏆</div>
+                    <h3 class="explanation-title">Starter</h3>
+                    <div class="explanation-badge" style="background: var(--starter);">Best For</div>
+                    <ul class="explanation-features">
+                        <li><strong>New businesses</strong> starting automation</li>
+                        <li><strong>Solopreneurs</strong> & small service providers</li>
+                        <li>Businesses with <strong>under 10 leads/month</strong></li>
+                        <li>Basic <strong>QR menu/price list</strong> needs</li>
+                        <li>Simple <strong>business hours</strong> auto-replies</li>
+                    </ul>
+                    <div class="explanation-note">
+                        <strong>Lead Automation:</strong> Basic contact capture only
+                    </div>
+                </div>
+                
+                <!-- Growth Tier -->
+                <div class="explanation-card popular">
+                    <div class="explanation-icon" style="background: var(--growth);">📊</div>
+                    <h3 class="explanation-title">Growth</h3>
+                    <div class="explanation-badge" style="background: var(--growth);">Most Popular</div>
+                    <ul class="explanation-features">
+                        <li><strong>Established businesses</strong> scaling up</li>
+                        <li><strong>Real estate agents</strong> & property managers</li>
+                        <li><strong>Dental clinics</strong> & medical practices</li>
+                        <li>Businesses with <strong>10-50 leads/month</strong></li>
+                        <li>Need <strong>24/7 lead capture</strong> & qualification</li>
+                    </ul>
+                    <div class="explanation-note">
+                        <strong>Lead Automation:</strong> Full qualification, follow-ups, appointment booking
+                    </div>
+                </div>
+                
+                <!-- Pro Tier -->
+                <div class="explanation-card">
+                    <div class="explanation-icon" style="background: var(--pro);">📈</div>
+                    <h3 class="explanation-title">Pro</h3>
+                    <div class="explanation-badge" style="background: var(--pro);">Premium</div>
+                    <ul class="explanation-features">
+                        <li><strong>Multiple location</strong> businesses</li>
+                        <li><strong>High-volume</strong> service providers</li>
+                        <li>Businesses with <strong>50+ leads/month</strong></li>
+                        <li>Need <strong>payment integration</strong> (M-Pesa)</li>
+                        <li>Require <strong>staff alerts</strong> & CRM</li>
+                    </ul>
+                    <div class="explanation-note">
+                        <strong>Lead Automation:</strong> Advanced scoring, CRM, multi-channel, analytics
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Automation Workflow Section -->
+    <section id="workflow" class="workflow-section">
+        <div class="container">
+            <h2 class="text-center">How Our Lead Automation Works</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 60px;">
+                From first contact to qualified lead - here's how we automate your sales process:
+            </p>
+            
+            <div class="workflow-steps">
+                <div class="workflow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Instant Response</h3>
+                        <p>AI responds within 5 seconds to any WhatsApp enquiry, 24/7. No missed leads.</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Smart Qualification</h3>
+                        <p>Asks key questions automatically: budget, timeline, location, specific needs.</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Appointment Booking</h3>
+                        <p>Directly schedules calls/viewings in your calendar. Sends automatic reminders.</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>CRM Logging</h3>
+                        <p>All lead details automatically saved to Google Sheets CRM. Easy to track.</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Follow-up Sequences</h3>
+                        <p>Automatic follow-ups after 1 day, 3 days, 1 week. Keeps leads warm.</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Staff Alert</h3>
+                        <p>Hot leads trigger instant SMS/email alerts to your sales team. No delays.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="workflow-note">
+                <h4>Real Estate Example Results:</h4>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="result-number">40-60%</div>
+                        <div class="result-label">More property enquiries captured</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-number">70%</div>
+                        <div class="result-label">Time saved on manual follow-ups</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-number">35%</div>
+                        <div class="result-label">Higher appointment conversion rate</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1334,7 +1802,7 @@
         </div>
     </section>
 
-    <!-- WhatsApp Demo Section - UPDATED AND CORRECTED -->
+    <!-- WhatsApp Demo Section -->
     <section id="demo" class="demo-section">
         <div class="container">
             <h2 class="text-center">See Our AI Front Desk in Action</h2>
@@ -1344,7 +1812,7 @@
             
             <div class="demo-container">
                 <div class="demo-content">
-                    <h3>🤖 Front Desk Automation Demo</h3>
+                    <h3>Front Desk Automation Demo</h3>
                     <p style="margin-bottom: 24px;">See how our system handles a dental clinic owner looking for front desk automation. The AI responds naturally, just like a human agent:</p>
                     
                     <!-- QR Code -->
@@ -1369,6 +1837,17 @@
                             <li><span class="feature-check">✓</span> Treatment package explanations</li>
                             <li><span class="feature-check">✓</span> Follow-ups & recall system</li>
                             <li><span class="feature-check">✓</span> Payment & insurance queries</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="demo-steps" style="margin-top: 20px;">
+                        <h4>Lead Automation Features (Real Estate Example)</h4>
+                        <ul class="steps-list">
+                            <li><span class="feature-check">✓</span> Property enquiry responses 24/7</li>
+                            <li><span class="feature-check">✓</span> Lead qualification (rent/buy/sell)</li>
+                            <li><span class="feature-check">✓</span> Appointment scheduling for viewings</li>
+                            <li><span class="feature-check">✓</span> Follow-up sequences for warm leads</li>
+                            <li><span class="feature-check">✓</span> Simple CRM integration</li>
                         </ul>
                     </div>
                     
@@ -1443,6 +1922,7 @@
                                         • Patient reminder system
                                         • Treatment package explanations
                                         • Google reviews collection
+                                        • <strong>Lead automation & qualification</strong>
                                         
                                         This typically handles 40-50 patient enquiries daily without human intervention.
                                         <div class="demo-message-time">2:48 PM</div>
@@ -1508,7 +1988,7 @@
             </p>
             
             <!-- Contact Information -->
-            <div class="contact-info">
+            <div class="contact-info-section">
                 <div class="contact-item" style="background: white; border: 2px solid rgba(255,255,255,0.3);">
                     <span style="font-size: 20px;">🇬🇧</span>
                     <div>
@@ -1597,9 +2077,10 @@
                     <h4>Packages</h4>
                     <a href="#packages">Starter (KES 7k)</a>
                     <a href="#packages">Growth (KES 15k)</a>
-                    <a href="#packages">Pro (KES 25k+)</a>
+                    <a href="#packages">Pro (KES 40k)</a>
+                    <a href="#tiers">Who It's For</a>
+                    <a href="#workflow">How It Works</a>
                     <a href="#delivery">Delivery Timeline</a>
-                    <a href="#demo">Live Demo</a>
                 </div>
                 
                 <div class="footer-links">
@@ -1627,24 +2108,21 @@
         </div>
     </footer>
 
-    <!-- JavaScript - CORRECTED -->
+    <!-- JavaScript -->
     <script>
         // Mobile menu toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
         
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100%';
-                navLinks.style.left = '0';
-                navLinks.style.right = '0';
-                navLinks.style.background = 'white';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.padding = '32px';
-                navLinks.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
-                navLinks.style.gap = '20px';
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-links') && !e.target.closest('.mobile-menu-btn')) {
+                navLinks.classList.remove('active');
             }
         });
         
@@ -1663,24 +2141,12 @@
                     });
                     
                     // Close mobile menu if open
-                    if(window.innerWidth <= 768) {
-                        navLinks.style.display = 'none';
-                    }
+                    navLinks.classList.remove('active');
                 }
             });
         });
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768 && 
-                !e.target.closest('.nav-links') && 
-                !e.target.closest('.mobile-menu-btn') &&
-                navLinks.style.display === 'flex') {
-                navLinks.style.display = 'none';
-            }
-        });
 
-        // WhatsApp Chat Simulation for Dental Demo - CORRECTED
+        // WhatsApp Chat Simulation for Dental Demo
         document.addEventListener('DOMContentLoaded', function() {
             const chatContainer = document.getElementById('demoChat');
             if (!chatContainer) return;
@@ -1762,35 +2228,7 @@
                 }, finalResponse.delay);
                 
             }, revealMessage.delay);
-            
-            // Smart scrolling - only auto-scroll if user is near bottom
-            let isUserScrolling = false;
-            let scrollTimeout;
-            
-            chatContainer.addEventListener('scroll', () => {
-                isUserScrolling = true;
-                
-                clearTimeout(scrollTimeout);
-                scrollTimeout = setTimeout(() => {
-                    isUserScrolling = false;
-                }, 1500);
-            });
-            
-            // Function to handle new message additions with smart scroll
-            function addMessageWithSmartScroll(messageDiv) {
-                const isNearBottom = chatContainer.scrollHeight - chatContainer.clientHeight - chatContainer.scrollTop < 150;
-                
-                chatContainer.appendChild(messageDiv);
-                
-                // Only scroll if user was near bottom
-                if (isNearBottom && !isUserScrolling) {
-                    setTimeout(() => {
-                        chatContainer.scrollTop = chatContainer.scrollHeight;
-                    }, 100);
-                }
-            }
         });
     </script>
 </body>
 </html>
-
