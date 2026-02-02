@@ -26,6 +26,7 @@
             --success: #10b981;
             --warning: #f59e0b;
             --danger: #ef4444;
+            --custom: #7c3aed;
             --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
             --shadow-lg: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
             --radius: 12px;
@@ -33,6 +34,7 @@
             --starter: #10b981;
             --growth: #f59e0b;
             --pro: #2563eb;
+            --custom-color: #7c3aed;
         }
 
         * {
@@ -351,6 +353,10 @@
             background: var(--pro);
         }
 
+        .pricing-card.custom .package-icon {
+            background: var(--custom-color);
+        }
+
         .package-name {
             font-size: 1.75rem;
             font-weight: 800;
@@ -400,6 +406,16 @@
             color: var(--success);
             font-weight: bold;
             font-size: 18px;
+        }
+
+        .feature-note {
+            background: rgba(37, 99, 235, 0.05);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            color: var(--primary);
+            margin-left: auto;
+            white-space: nowrap;
         }
 
         .delivery-time {
@@ -519,6 +535,63 @@
             color: var(--primary);
         }
 
+        /* M-Pesa Highlight Section */
+        .mpesa-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f0fff4 0%, #dcfce7 100%);
+            text-align: center;
+        }
+
+        .mpesa-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .mpesa-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            border: 2px solid #10b981;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            text-align: left;
+        }
+
+        .mpesa-icon {
+            font-size: 60px;
+            color: #10b981;
+            flex-shrink: 0;
+        }
+
+        .mpesa-content h3 {
+            font-size: 1.75rem;
+            color: #065f46;
+            margin-bottom: 15px;
+        }
+
+        .mpesa-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .mpesa-feature {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius);
+            border: 1px solid #a7f3d0;
+            text-align: center;
+        }
+
+        .mpesa-feature i {
+            font-size: 24px;
+            color: #10b981;
+            margin-bottom: 10px;
+        }
+
         /* Workflow Section */
         .workflow-section {
             padding: 100px 0;
@@ -613,223 +686,6 @@
             font-size: 14px;
             color: var(--gray);
             line-height: 1.4;
-        }
-
-        /* Forms Section */
-        .forms-section {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-        }
-
-        .forms-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .form-card {
-            background: white;
-            border-radius: var(--radius-lg);
-            padding: 30px;
-            box-shadow: var(--shadow);
-            border: 2px solid var(--gray-light);
-            transition: all 0.3s ease;
-        }
-
-        .form-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .form-card.popular {
-            border-color: var(--growth);
-            transform: scale(1.02);
-        }
-
-        .form-card.popular:hover {
-            transform: scale(1.02) translateY(-5px);
-        }
-
-        .form-badge {
-            display: inline-block;
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        .form-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-
-        .form-preview {
-            background: var(--light);
-            padding: 25px;
-            border-radius: var(--radius);
-            margin-bottom: 20px;
-            border: 1px solid var(--gray-light);
-        }
-
-        .form-field {
-            margin-bottom: 15px;
-        }
-
-        .form-field label {
-            display: block;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--dark);
-        }
-
-        .form-field input,
-        .form-field select {
-            width: 100%;
-            padding: 12px 16px;
-            border: 2px solid var(--gray-light);
-            border-radius: var(--radius);
-            background: white;
-            font-family: 'Inter', sans-serif;
-            font-size: 15px;
-            color: var(--dark);
-        }
-
-        .form-field input:focus,
-        .form-field select:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        .form-submit {
-            width: 100%;
-            padding: 14px;
-            background: var(--primary);
-            color: white;
-            border: none;
-            border-radius: var(--radius);
-            font-weight: 600;
-            font-size: 15px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-        }
-
-        .form-submit:hover {
-            background: var(--primary-dark);
-        }
-
-        .form-features {
-            background: var(--light);
-            padding: 20px;
-            border-radius: var(--radius);
-            border-left: 4px solid var(--primary);
-        }
-
-        .form-features p {
-            margin: 8px 0;
-            font-size: 14px;
-        }
-
-        .form-features strong {
-            color: var(--dark);
-        }
-
-        /* Form Steps */
-        .form-step {
-            padding: 15px;
-            background: white;
-            border-radius: var(--radius);
-            margin-bottom: 10px;
-            border: 2px solid var(--gray-light);
-        }
-
-        .form-step.active {
-            border-color: var(--primary);
-        }
-
-        .form-step h4 {
-            font-size: 14px;
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-
-        .service-options {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .service-option {
-            padding: 12px;
-            background: var(--light);
-            border-radius: var(--radius);
-            border: 2px solid var(--gray-light);
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .service-option:hover {
-            border-color: var(--primary);
-            background: white;
-        }
-
-        /* Integration Flow */
-        .forms-integration {
-            background: white;
-            padding: 40px;
-            border-radius: var(--radius-lg);
-            border: 2px solid rgba(37, 99, 235, 0.1);
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .integration-flow {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .flow-step {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            min-width: 120px;
-        }
-
-        .flow-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            color: white;
-        }
-
-        .flow-text {
-            font-size: 14px;
-            font-weight: 600;
-            text-align: center;
-            color: var(--dark);
-        }
-
-        .flow-arrow {
-            font-size: 24px;
-            color: var(--gray);
-            font-weight: 700;
         }
 
         /* Delivery Timeline */
@@ -1471,8 +1327,10 @@
                 grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             }
             
-            .forms-grid {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            .mpesa-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
             }
         }
 
@@ -1609,28 +1467,6 @@
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
-            
-            /* Responsive Forms */
-            .forms-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .form-card.popular {
-                transform: none;
-            }
-            
-            .form-card.popular:hover {
-                transform: translateY(-5px);
-            }
-            
-            .integration-flow {
-                flex-direction: column;
-                gap: 30px;
-            }
-            
-            .flow-arrow {
-                transform: rotate(90deg);
-            }
         }
 
         /* Small Mobile (480px and below) */
@@ -1677,8 +1513,8 @@
                 padding: 80px 0;
             }
             
-            .forms-integration {
-                padding: 25px 20px;
+            .mpesa-card {
+                padding: 20px;
             }
         }
 
@@ -1710,8 +1546,8 @@
                 <a href="#roi">ROI Results</a>
                 <a href="#packages">Packages</a>
                 <a href="#tiers">Who It's For</a>
+                <a href="#mpesa">M-Pesa Payments</a>
                 <a href="#workflow">How It Works</a>
-                <a href="#forms">Lead Forms</a>
                 <a href="#delivery">Delivery</a>
                 <a href="#demo">See Demo</a>
                 <a href="#contact" class="btn btn-primary">Get Started</a>
@@ -1724,9 +1560,10 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-tagline">
+                    <span>💰</span> Fixed Packages • M-Pesa Payments • Fast Delivery
                 </div>
-                <h1>Simple, predictable pricing for business automation</h1>
-                <p>Three packages. One master demo. Everything ready in days. No meetings, no long forms, no surprises. We install systems that work 24/7 for your business.</p>
+                <h1>Complete Business Automation with Integrated Payments</h1>
+                <p>Four packages designed for growth. Includes M-Pesa STK Push payments, AI automation, and lead management. Everything ready in days. No meetings, no surprises.</p>
                 <div style="display: flex; gap: 16px; margin-top: 40px; flex-wrap: wrap;">
                     <a href="#packages" class="btn btn-primary">See Packages</a>
                     <a href="#demo" class="btn btn-secondary">Try Live Demo</a>
@@ -1766,105 +1603,171 @@
                 </div>
                 
                 <div class="roi-card">
-                    <div class="roi-icon">👥</div>
-                    <div class="roi-number">0</div>
-                    <h3>Extra Staff Needed</h3>
-                    <p>Scale operations without hiring additional customer service or admin staff.</p>
+                    <div class="roi-icon">💳</div>
+                    <div class="roi-number">2x Faster</div>
+                    <h3>Payment Processing</h3>
+                    <p>M-Pesa STK Push integration reduces payment friction and improves cash flow.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-<section id="packages" class="pricing-section">
-    <div class="container">
-        <h2 class="text-center">Choose Your Automation Package</h2>
-        <p class="text-center" style="max-width: 800px; margin: 0 auto 30px;">
-        <p class="text-center" style="color: var(--danger); font-weight: 600; max-width: 800px; margin: 0 auto 60px;">
-
-        
-        <div class="pricing-cards">
-            <!-- Starter Package -->
-            <div class="pricing-card">
-                <div class="package-icon">🏆</div>
-                <h3 class="package-name">Starter</h3>
-                <p class="package-desc">Perfect for basic QR systems and simple automation</p>
-                
-                <div class="price">
-                    <div class="price-amount">KES 7,000</div>
-                    <div class="price-period">+ KES 2,500/month</div>
-                </div>
-                
-                <div class="delivery-time">📅 Delivery: 24-48 hours</div>
-                
-                <ul class="features-list">
-                    <li><span class="feature-check">✓</span> QR Systems & WhatsApp Templates</li>
-                    <li><span class="feature-check">✓</span> Branded Web Menu / Service Page</li>
-                    <li><span class="feature-check">✓</span> Basic Lead Capture Setup</li>
-                    <li><span class="feature-check">✓</span> Google Sheets Contact Log</li>
-                    <li><span class="feature-check">✓</span> Simple Business Hours Replies</li>
-                    <li><span class="feature-check">✓</span> Quick Setup & Training</li>
-                </ul>
-                
-                <a href="#contact" class="btn btn-secondary" style="width: 100%;">Get Starter</a>
-            </div>
+    <section id="packages" class="pricing-section">
+        <div class="container">
+            <h2 class="text-center">Choose Your Automation Package</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 30px;">
+                Transparent pricing with everything included. Monthly fees cover hosting, maintenance, and support.
+            </p>
+            <p class="text-center" style="color: var(--danger); font-weight: 600; max-width: 800px; margin: 0 auto 60px;">
+                ⚠️ All packages include FREE setup assistance and training. No hidden costs.
+            </p>
             
-            <!-- Growth Package -->
-            <div class="pricing-card growth popular">
-                <div class="package-badge">MOST POPULAR</div>
-                <div class="package-icon">📊</div>
-                <h3 class="package-name">Growth</h3>
-                <p class="package-desc">Everything in Starter plus lead & revenue growth tools</p>
-                
-                <div class="price">
-                    <div class="price-amount">KES 15,000</div>
-                    <div class="price-period">+ KES 5,000/month</div>
+            <div class="pricing-cards">
+                <!-- Starter Package -->
+                <div class="pricing-card">
+                    <div class="package-icon">🏆</div>
+                    <h3 class="package-name">Starter</h3>
+                    <p class="package-desc">Perfect for basic QR systems and simple automation</p>
+                    
+                    <div class="price">
+                        <div class="price-amount">KES 7,000</div>
+                        <div class="price-period">+ KES 2,500/month</div>
+                    </div>
+                    
+                    <div class="delivery-time">📅 Delivery: 24-48 hours</div>
+                    
+                    <ul class="features-list">
+                        <li><span class="feature-check">✓</span> QR Systems & WhatsApp Templates</li>
+                        <li><span class="feature-check">✓</span> Branded Web Menu / Service Page</li>
+                        <li><span class="feature-check">✓</span> Basic Lead Capture Setup</li>
+                        <li><span class="feature-check">✓</span> Google Sheets Contact Log</li>
+                        <li><span class="feature-check">✓</span> Simple Business Hours Replies</li>
+                        <li><span class="feature-check">✓</span> Quick Setup & Training</li>
+                    </ul>
+                    
+                    <a href="#contact" class="btn btn-secondary" style="width: 100%;">Get Starter</a>
                 </div>
                 
-                <div class="delivery-time">📅 Delivery: 48-72 hours</div>
+                <!-- Growth Package - UPDATED with M-Pesa -->
+<div class="pricing-card growth popular">
+    <div class="package-badge">MOST POPULAR</div>
+    <div class="package-icon">📊</div>
+    <h3 class="package-name">Growth</h3>
+    <p class="package-desc">Everything in Starter plus lead & revenue growth tools with payments</p>
+    
+    <div class="price">
+        <div class="price-amount">KES 20,000</div>
+        <div class="price-period">+ KES 5,000/month</div>
+    </div>
+    
+    <div class="delivery-time">📅 Delivery: 48-72 hours</div>
+    
+    <ul class="features-list">
+        <li><span class="feature-check">✓</span> <strong>Everything in Starter</strong></li>
+        <li><span class="feature-check">✓</span> Loyalty / Rewards QR System</li>
+        <li><span class="feature-check">✓</span> AI WhatsApp Agent</li>
+        <li><span class="feature-check">✓</span> WhatsApp Ordering System</li>
+        <li><span class="feature-check">✓</span> M-Pesa STK Push Payments <span class="feature-note">NEW</span></li>
+        <li><span class="feature-check">✓</span> Google Reviews Automation</li>
+        <li><span class="feature-check">✓</span> <strong>Lead Automation System</strong></li>
+    </ul>
+    
+    <a href="#contact" class="btn btn-primary" style="width: 100%; background: var(--growth);">Get Growth</a>
+</div>
                 
-                <ul class="features-list">
-                    <li><span class="feature-check">✓</span> Everything in Starter</li>
-                    <li><span class="feature-check">✓</span> Loyalty / Rewards QR System</li>
-                    <li><span class="feature-check">✓</span> AI WhatsApp Agent</li>
-                    <li><span class="feature-check">✓</span> WhatsApp Ordering System</li>
-                    <li><span class="feature-check">✓</span> Google Reviews Automation</li>
-                    <li><span class="feature-check">✓</span> Lead Capture Forms (landing pages)</li>
-                    <li><span class="feature-check">✓</span> Lead Automation System</li>
-                </ul>
-                
-                <a href="#contact" class="btn btn-primary" style="width: 100%; background: var(--growth);">Get Growth</a>
-            </div>
-            
-            <!-- Pro Package -->
-            <div class="pricing-card pro">
-                <div class="package-icon">📈</div>
-                <h3 class="package-name">Pro</h3>
-                <p class="package-desc">Complete business automation with advanced lead management</p>
-                
-                <div class="price">
-                    <div class="price-amount">KES 40,000+</div>
-                    <div class="price-period">+ KES 10k–15k/month</div>
+                <!-- Pro Package -->
+                <div class="pricing-card pro">
+                    <div class="package-icon">📈</div>
+                    <h3 class="package-name">Pro</h3>
+                    <p class="package-desc">Complete business automation with M-Pesa payments</p>
+                    
+                    <div class="price">
+                        <div class="price-amount">KES 40,000</div>
+                        <div class="price-period">+ KES 10,000/month</div>
+                    </div>
+                    
+                    <div class="delivery-time">📅 Delivery: 3-5 days</div>
+                    
+                    <ul class="features-list">
+                        <li><span class="feature-check">✓</span> <strong>Everything in Growth</strong></li>
+                        <li><span class="feature-check">✓</span> Advanced AI Agent</li>
+                        <li><span class="feature-check">✓</span> M-Pesa STK Push Payments <span class="feature-note">NEW</span></li>
+                        <li><span class="feature-check">✓</span> Simple CRM (Google Sheets)</li>
+                        <li><span class="feature-check">✓</span> Staff SMS/Email Alerts</li>
+                        <li><span class="feature-check">✓</span> Social Media Content Automation</li>
+                        <li><span class="feature-check">✓</span> <strong>Advanced Lead Automation</strong></li>
+                    </ul>
+                    
+                    <a href="#contact" class="btn btn-primary" style="width: 100%;">Get Pro</a>
                 </div>
                 
-                <div class="delivery-time">📅 Delivery: 3-5 days</div>
-                
-                <ul class="features-list">
-                    <li><span class="feature-check">✓</span> Everything in Growth</li>
-                    <li><span class="feature-check">✓</span> Advanced AI Agent</li>
-                    <li><span class="feature-check">✓</span> M-Pesa STK Push Payments</li>
-                    <li><span class="feature-check">✓</span> Simple CRM (Google Sheets)</li>
-                    <li><span class="feature-check">✓</span> Staff SMS/Email Alerts</li>
-                    <li><span class="feature-check">✓</span> Social Media Content Automation</li>
-                    <li><span class="feature-check">✓</span> 10+ Custom Landing Pages</li>
-                    <li><span class="feature-check">✓</span> Advanced Lead Automation</li>
-                </ul>
-                
-                <a href="#contact" class="btn btn-primary" style="width: 100%;">Get Pro</a>
+                <!-- Custom Package -->
+                <div class="pricing-card custom">
+                    <div class="package-icon">🎯</div>
+                    <h3 class="package-name">Custom</h3>
+                    <p class="package-desc">Tailored solutions for unique business needs</p>
+                    
+                    <div class="price">
+                        <div class="price-amount">Custom Quote</div>
+                        <div class="price-period">Monthly fee based on requirements</div>
+                    </div>
+                    
+                    <div class="delivery-time">📅 Delivery: 5-10 days</div>
+                    
+                    <ul class="features-list">
+                        <li><span class="feature-check">✓</span> Custom AI Training & Workflows</li>
+                        <li><span class="feature-check">✓</span> Multiple Payment Integrations</li>
+                        <li><span class="feature-check">✓</span> Advanced CRM Integration</li>
+                        <li><span class="feature-check">✓</span> Multi-Location Management</li>
+                        <li><span class="feature-check">✓</span> Custom Reporting & Analytics</li>
+                        <li><span class="feature-check">✓</span> API Integrations</li>
+                        <li><span class="feature-check">✓</span> <strong>Dedicated Support & Training</strong></li>
+                    </ul>
+                    
+                    <a href="#contact" class="btn btn-primary" style="width: 100%; background: var(--custom-color);">Get Custom Quote</a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- M-Pesa Payments Highlight -->
+    <section id="mpesa" class="mpesa-section">
+        <div class="container">
+            <h2>Integrated M-Pesa STK Push Payments</h2>
+            <p style="max-width: 800px; margin: 20px auto 40px;">
+                Seamlessly accept payments directly through WhatsApp. Customers can pay instantly without leaving the conversation.
+            </p>
+            
+            <div class="mpesa-container">
+                <div class="mpesa-card">
+                    <div class="mpesa-icon">💳</div>
+                    <div class="mpesa-content">
+                        <h3>How M-Pesa STK Push Works in Your System</h3>
+                        <p>When customers place orders or book services through WhatsApp, they receive an automatic M-Pesa STK Push prompt on their phone. One tap, enter PIN, payment complete. Funds go directly to your account.</p>
+                        
+                        <div class="mpesa-features">
+                            <div class="mpesa-feature">
+                                <i class="fas fa-bolt"></i>
+                                <div><strong>Instant Payments</strong></div>
+                                <small>No manual payment requests</small>
+                            </div>
+                            <div class="mpesa-feature">
+                                <i class="fas fa-shield-alt"></i>
+                                <div><strong>Secure & Verified</strong></div>
+                                <small>Safaricom secured transactions</small>
+                            </div>
+                            <div class="mpesa-feature">
+                                <i class="fas fa-sync-alt"></i>
+                                <div><strong>Auto-Reconciliation</strong></div>
+                                <small>Payments logged automatically</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Tier Explanation Section -->
     <section id="tiers" class="tier-explanation">
@@ -1883,7 +1786,7 @@
                     <ul class="explanation-features">
                         <li><strong>New businesses</strong> starting automation</li>
                         <li><strong>Solopreneurs</strong> & small service providers</li>
-                        <li>Businesses with <strong>few leads/month</strong></li>
+                        <li>Businesses with <strong>under 10 leads/month</strong></li>
                         <li>Basic <strong>QR menu/price list</strong> needs</li>
                         <li>Simple <strong>business hours</strong> auto-replies</li>
                     </ul>
@@ -1892,22 +1795,23 @@
                     </div>
                 </div>
                 
-                <!-- Growth Tier -->
-                <div class="explanation-card popular">
-                    <div class="explanation-icon" style="background: var(--growth);">📊</div>
-                    <h3 class="explanation-title">Growth</h3>
-                    <div class="explanation-badge" style="background: var(--growth);">Most Popular</div>
-                    <ul class="explanation-features">
-                        <li><strong>Established businesses</strong> scaling up</li>
-                        <li><strong>Real estate agents</strong> & property managers</li>
-                        <li><strong>Dental clinics</strong> & medical practices</li>
-                        <li>Businesses with <strong>Active leads flow/month</strong></li>
-                        <li>Need <strong>24/7 lead capture</strong> & qualification</li>
-                    </ul>
-                    <div class="explanation-note">
-                        <strong>Lead Automation:</strong> Full qualification, follow-ups, appointment booking
-                    </div>
-                </div>
+               <!-- Growth Tier Explanation - UPDATED -->
+<div class="explanation-card popular">
+    <div class="explanation-icon" style="background: var(--growth);">📊</div>
+    <h3 class="explanation-title">Growth</h3>
+    <div class="explanation-badge" style="background: var(--growth);">Most Popular</div>
+    <ul class="explanation-features">
+        <li><strong>Established businesses</strong> scaling up</li>
+        <li><strong>Real estate agents</strong> & property managers</li>
+        <li><strong>Dental clinics</strong> & medical practices</li>
+        <li>Businesses with <strong>10-50 leads/month</strong></li>
+        <li>Need <strong>24/7 lead capture</strong> & qualification</li>
+        <li>Want <strong>M-Pesa payments</strong> integration</li>
+    </ul>
+    <div class="explanation-note">
+        <strong>Lead Automation:</strong> Full qualification, follow-ups, appointment booking, <strong>M-Pesa payments</strong>
+    </div>
+</div>
                 
                 <!-- Pro Tier -->
                 <div class="explanation-card">
@@ -1918,11 +1822,28 @@
                         <li><strong>Multiple location</strong> businesses</li>
                         <li><strong>High-volume</strong> service providers</li>
                         <li>Businesses with <strong>50+ leads/month</strong></li>
-                        <li>Need <strong>payment integration</strong> (M-Pesa)</li>
+                        <li>Need <strong>M-Pesa payments</strong> integration</li>
                         <li>Require <strong>staff alerts</strong> & CRM</li>
                     </ul>
                     <div class="explanation-note">
                         <strong>Lead Automation:</strong> Advanced scoring, CRM, multi-channel, analytics
+                    </div>
+                </div>
+                
+                <!-- Custom Tier -->
+                <div class="explanation-card">
+                    <div class="explanation-icon" style="background: var(--custom-color);">🎯</div>
+                    <h3 class="explanation-title">Custom</h3>
+                    <div class="explanation-badge" style="background: var(--custom-color);">Enterprise</div>
+                    <ul class="explanation-features">
+                        <li><strong>Large enterprises</strong> with complex needs</li>
+                        <li><strong>Franchise businesses</strong> with multiple branches</li>
+                        <li>Need <strong>custom integrations</strong> with existing systems</li>
+                        <li>Require <strong>advanced analytics</strong> & reporting</li>
+                        <li>Need <strong>white-label solutions</strong></li>
+                    </ul>
+                    <div class="explanation-note">
+                        <strong>Lead Automation:</strong> Fully customized workflows, API integrations, enterprise features
                     </div>
                 </div>
             </div>
@@ -1965,24 +1886,24 @@
                 <div class="workflow-step">
                     <div class="step-number">4</div>
                     <div class="step-content">
-                        <h3>CRM Logging</h3>
-                        <p>All lead details automatically saved to Google Sheets CRM. Easy to track.</p>
+                        <h3>Payment Processing</h3>
+                        <p>M-Pesa STK Push integration for instant payments (Pro & Custom packages).</p>
                     </div>
                 </div>
                 
                 <div class="workflow-step">
                     <div class="step-number">5</div>
                     <div class="step-content">
-                        <h3>Follow-up Sequences</h3>
-                        <p>Automatic follow-ups after 1 day, 3 days, 1 week. Keeps leads warm.</p>
+                        <h3>CRM Logging</h3>
+                        <p>All lead details automatically saved to Google Sheets CRM. Easy to track.</p>
                     </div>
                 </div>
                 
                 <div class="workflow-step">
                     <div class="step-number">6</div>
                     <div class="step-content">
-                        <h3>Staff Alert</h3>
-                        <p>Hot leads trigger instant SMS/email alerts to your sales team. No delays.</p>
+                        <h3>Follow-up Sequences</h3>
+                        <p>Automatic follow-ups after 1 day, 3 days, 1 week. Keeps leads warm.</p>
                     </div>
                 </div>
             </div>
@@ -2001,129 +1922,6 @@
                     <div class="result-item">
                         <div class="result-number">35%</div>
                         <div class="result-label">Higher appointment conversion rate</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lead Capture Forms Section -->
-    <section id="forms" class="forms-section">
-        <div class="container">
-            <h2 class="text-center">Landing Pages & Lead Capture Forms</h2>
-            <p class="text-center" style="max-width: 800px; margin: 0 auto 60px;">
-                Every lead automation needs entry points. We build simple, high-converting forms that feed directly into your WhatsApp automation.
-            </p>
-            
-            <div class="forms-grid">
-                <!-- Simple Form -->
-                <div class="form-card">
-                    <div class="form-badge" style="background: var(--starter);">Starter</div>
-                    <h3>Basic Contact Form</h3>
-                    <div class="form-preview">
-                        <div class="form-field">
-                            <label>Name</label>
-                            <input type="text" placeholder="Your name" readonly>
-                        </div>
-                        <div class="form-field">
-                            <label>Phone</label>
-                            <input type="tel" placeholder="+254 7XX XXX XXX" readonly>
-                        </div>
-                        <button class="form-submit">Send to WhatsApp</button>
-                    </div>
-                    <div class="form-features">
-                        <p><strong>For:</strong> Basic lead capture</p>
-                        <p><strong>Use:</strong> QR codes, website buttons</p>
-                    </div>
-                </div>
-                
-                <!-- Growth Form -->
-                <div class="form-card popular">
-                    <div class="form-badge" style="background: var(--growth);">Growth</div>
-                    <h3>Smart Qualification Form</h3>
-                    <div class="form-preview">
-                        <div class="form-field">
-                            <label>What service do you need?</label>
-                            <select readonly>
-                                <option>Property Viewing</option>
-                                <option>Dental Consultation</option>
-                                <option>Restaurant Booking</option>
-                            </select>
-                        </div>
-                        <div class="form-field">
-                            <label>Budget range</label>
-                            <select readonly>
-                                <option>Under KES 50,000</option>
-                                <option>KES 50,000-200,000</option>
-                                <option>KES 200,000+</option>
-                            </select>
-                        </div>
-                        <div class="form-field">
-                            <label>When do you need it?</label>
-                            <select readonly>
-                                <option>This week</option>
-                                <option>This month</option>
-                                <option>Just exploring</option>
-                            </select>
-                        </div>
-                        <button class="form-submit">Get Instant WhatsApp Quote</button>
-                    </div>
-                    <div class="form-features">
-                        <p><strong>For:</strong> Lead qualification & scoring</p>
-                        <p><strong>Use:</strong> Facebook/Instagram ads, email campaigns</p>
-                    </div>
-                </div>
-                
-                <!-- Pro Form -->
-                <div class="form-card">
-                    <div class="form-badge" style="background: var(--pro);">Pro</div>
-                    <h3>Multi-Step Funnel</h3>
-                    <div class="form-preview">
-                        <div class="form-step active">
-                            <h4>Step 1: Service Selection</h4>
-                            <div class="service-options">
-                                <div class="service-option">🏠 Property Viewing</div>
-                                <div class="service-option">🦷 Dental Checkup</div>
-                                <div class="service-option">🍽️ Table Booking</div>
-                            </div>
-                        </div>
-                        <div class="form-step">
-                            <h4>Step 2: Details</h4>
-                            <p>Auto-filled based on step 1</p>
-                        </div>
-                        <div class="form-step">
-                            <h4>Step 3: Instant WhatsApp</h4>
-                            <p>AI agent continues conversation</p>
-                        </div>
-                    </div>
-                    <div class="form-features">
-                        <p><strong>For:</strong> High-value lead conversion</p>
-                        <p><strong>Use:</strong> Google Ads, LinkedIn campaigns, referrals</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="forms-integration">
-                <h4 class="text-center">How Forms Integrate with WhatsApp</h4>
-                <div class="integration-flow">
-                    <div class="flow-step">
-                        <div class="flow-icon">📱</div>
-                        <div class="flow-text">Customer fills form</div>
-                    </div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-step">
-                        <div class="flow-icon">⚡</div>
-                        <div class="flow-text">Instant WhatsApp message</div>
-                    </div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-step">
-                        <div class="flow-icon">🤖</div>
-                        <div class="flow-text">AI continues conversation</div>
-                    </div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-step">
-                        <div class="flow-icon">📊</div>
-                        <div class="flow-text">Lead saved to CRM</div>
                     </div>
                 </div>
             </div>
@@ -2159,7 +1957,7 @@
                     <div class="timeline-icon">3</div>
                     <div class="timeline-content">
                         <h4 class="timeline-title">System Activation</h4>
-                        <p class="timeline-desc">Based on your package, we activate: QR codes, web menu, auto-replies, AI agent, payment systems, CRM, and staff alerts.</p>
+                        <p class="timeline-desc">Based on your package, we activate: QR codes, web menu, auto-replies, AI agent, M-Pesa payments, CRM, and staff alerts.</p>
                     </div>
                 </div>
                 
@@ -2167,7 +1965,7 @@
                     <div class="timeline-icon">4</div>
                     <div class="timeline-content">
                         <h4 class="timeline-title">Testing & Handover</h4>
-                        <p class="timeline-desc">We test everything: QR scanning, WhatsApp replies, order flows, payments. Then we hand over login details and provide simple documentation.</p>
+                        <p class="timeline-desc">We test everything: QR scanning, WhatsApp replies, order flows, M-Pesa payments. Then we hand over login details and provide simple documentation.</p>
                     </div>
                 </div>
             </div>
@@ -2286,7 +2084,7 @@
                                     </div>
                                     
                                     <div class="demo-message demo-message-in">
-                                        We have a few options. Our most popular for clinics like yours is the Growth Package at KES 15,000 setup + KES 5,000/month.
+                                        We have a few options. Our most popular for clinics like yours is the Growth Package at KES 20,000 setup + KES 5,000/month.
                                         
                                         It includes:
                                         • 24/7 AI front desk answering enquiries
@@ -2448,12 +2246,11 @@
                 <div class="footer-links">
                     <h4>Packages</h4>
                     <a href="#packages">Starter (KES 7k)</a>
-                    <a href="#packages">Growth (KES 15k)</a>
+                    <a href="#packages">Growth (KES 20k)</a>
                     <a href="#packages">Pro (KES 40k)</a>
+                    <a href="#packages">Custom (Quote)</a>
                     <a href="#tiers">Who It's For</a>
                     <a href="#workflow">How It Works</a>
-                    <a href="#forms">Lead Forms</a>
-                    <a href="#delivery">Delivery Timeline</a>
                 </div>
                 
                 <div class="footer-links">
@@ -2461,7 +2258,7 @@
                     <a href="https://smartoptionmedia.netlify.app">Main Website</a>
                     <a href="https://smartoptionmedia.netlify.app/#services">Services</a>
                     <a href="#roi">ROI Results</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#mpesa">M-Pesa Payments</a>
                     <a href="https://smartoptionmedia.netlify.app/#tech">Tech Stack</a>
                 </div>
                 
@@ -2605,8 +2402,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
